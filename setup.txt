@@ -1,0 +1,39 @@
+→ mkdir github-testing
+→ cd github-testing
+→ git init
+Initialized empty Git repository in /Users/Nemo157/sources/github-testing/.git/
+→ vim README.md
+→ git add README.md
+→ git commit -m "Initial"
+[master (root-commit) 2d0ff1c] Initial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+→ git remote add origin https://github.com/Nemo157/github-testing
+→ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 261 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:Nemo157/github-testing
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+→ git cat-file -p 2d0ff1c
+tree b1bb7e18e24e5c4f5ad11f5aae3a3dd5185399c6
+author Wim Looman <wim@nemo157.com> 1455234743 +0100
+committer Wim Looman <wim@nemo157.com> 1455234743 +0100
+
+Initial
+→ git cat-file -p b1bb7e18e24e5c4f5ad11f5aae3a3dd5185399c6
+100644 blob 8be5ec06babaf2b24ddd345c2dbfaaa2c395d7aa    README.md
+→ git cat-file -p 8be5ec06babaf2b24ddd345c2dbfaaa2c395d7aa
+Testing whether github allows storing arbitrary refs
+→ git cat-file -t 2d0ff1c
+commit
+→ git update-ref refs/testing/does-this-work 8be5ec06babaf2b24ddd345c2dbfaaa2c395d7aa
+→ git push origin refs/testing/does-this-work
+Counting objects: 1, done.
+Writing objects: 100% (1/1), 93 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To git@github.com:Nemo157/github-testing
+ * [new branch]      refs/testing/does-this-work -> refs/testing/does-this-work
