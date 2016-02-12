@@ -1,0 +1,13 @@
+→ git clone https://github.com/Nemo157/github-testing github-testing-2
+Cloning into 'github-testing-2'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+Checking connectivity... done.
+→ cd github-testing-2
+→ git fetch origin refs/testing/does-this-work:refs/testing/does-this-work
+From https://github.com/Nemo157/github-testing
+ * [new ref]         refs/testing/does-this-work -> refs/testing/does-this-work
+→ git cat-file -p refs/testing/does-this-work
+Testing whether github allows storing arbitrary refs
