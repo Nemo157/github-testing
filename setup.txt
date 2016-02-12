@@ -28,8 +28,6 @@ Initial
 100644 blob 8be5ec06babaf2b24ddd345c2dbfaaa2c395d7aa    README.md
 → git cat-file -p 8be5ec06babaf2b24ddd345c2dbfaaa2c395d7aa
 Testing whether github allows storing arbitrary refs
-→ git cat-file -t 2d0ff1c
-commit
 → git update-ref refs/testing/does-this-work 8be5ec06babaf2b24ddd345c2dbfaaa2c395d7aa
 → git cat-file -p refs/testing/does-this-work
 Testing whether github allows storing arbitrary refs
